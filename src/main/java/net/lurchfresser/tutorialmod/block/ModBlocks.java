@@ -15,7 +15,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-//test
+
 public class ModBlocks {
 
     public static final Block TANZANITE_BLOCK = registerBlock("tanzanite_block",
