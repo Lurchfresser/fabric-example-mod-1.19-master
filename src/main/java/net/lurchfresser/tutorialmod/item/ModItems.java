@@ -3,6 +3,7 @@ package net.lurchfresser.tutorialmod.item;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.lurchfresser.tutorialmod.TutorialMod;
+import net.lurchfresser.tutorialmod.item.custom.ConsumerItem;
 import net.lurchfresser.tutorialmod.item.custom.EightBallItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -16,6 +17,7 @@ public class ModItems {
     public static final Item RAW_TANZANITE = registerItem("raw_tanzanite",new Item(new FabricItemSettings()), ModItemGroup.TANZANITE);
     public static final Item TANZANITE = registerItem("tanzanite",new Item(new FabricItemSettings()), ModItemGroup.TANZANITE);
     public static final Item EIGHT_BALL = registerItem("eight_ball",new EightBallItem(new FabricItemSettings().maxCount(1)), ModItemGroup.TANZANITE);
+    public static final Item CONSUMER = registerItem("consumer",new ConsumerItem(new FabricItemSettings().maxCount(1)), ModItemGroup.TANZANITE);
 
     private static Item registerItem(String name, Item item, ItemGroup group){
         //ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> entries.add(MY_ITEM));
