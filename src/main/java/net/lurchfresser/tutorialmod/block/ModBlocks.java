@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.lurchfresser.tutorialmod.TutorialMod;
+import net.lurchfresser.tutorialmod.block.custom.JumpyBlock;
 import net.lurchfresser.tutorialmod.item.ModItemGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -32,6 +33,9 @@ public static final Block ENDSTONE_TANZANITE_ORE = registerBlock("endstone_tanza
             ModItemGroup.TANZANITE);
 public static final Block NETHERRACK_TANZANITE_ORE = registerBlock("netherrack_tanzanite_ore",
             new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(), UniformIntProvider.create(3,7)),
+            ModItemGroup.TANZANITE);
+public static final Block JUMPY_BLOCK= registerBlock("jumpy_block",
+            new JumpyBlock(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()),
             ModItemGroup.TANZANITE);
 
     private static Item registerBlockItem(String name, Block block, ItemGroup group){

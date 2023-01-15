@@ -30,17 +30,17 @@ public class ConsumerItem extends Item {
 
         if(!user.world.isClient) {
             if (entity instanceof ZombieEntity) {
-                entity.kill();
+                entity.discard();
                 user.addStatusEffect(new StatusEffectInstance(StatusEffect.byRawId(19), 100));
             } else if (entity instanceof CreeperEntity) {
-                entity.kill();
+                entity.discard();
                 user.world.createExplosion(user, null,null, x + 0.5D, y + 0.5d, z + 0.5d,3F,false,World.ExplosionSourceType.MOB);
             }
         }
         return super.useOnEntity(stack, user, entity, hand);
     }
-    /*
 
-     */
-
+    public final void discard(LivingEntity entity) {
+        entity.remove(Entity.RemovalReason.DISCARDED);
+    }
 }
